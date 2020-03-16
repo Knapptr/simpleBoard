@@ -1,0 +1,14 @@
+<h1><%=title%></h1>
+
+<% for(let i = 0; i<messages.length; i++){ %>
+<hr>
+<h4>From: <%= messages[i].user %>  </h4>
+<h5><%= messages[i].text %> </h5>
+<h6>Sent:<%= messages[i].added %> </h6>
+<form method="POST" action="/">
+<button name = "deleteBtn" type="submit" value=<%=i%> > Delete</button>
+</form>
+<%}%>
+
+
+<a href="/new" >Send a Message</a>
